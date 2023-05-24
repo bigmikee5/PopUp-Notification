@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOUSE LEAVE POPUP</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <div id="modelBox">
+      <img src="./images/banner.png" width="100%" />
+      <div class="offer-text">
+        <h2>GET 20% OFF</h2>
+        <small>on all beauty products</small>
+        <p>
+          We're currently running promo on all our products. This promo runs
+          from wednesday 24th May to tuesday 30th May 2023. Don not miss out on
+          this.
+        </p>
+        <form>
+          <input type="email" id="email" placeholder="Email Address" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <img src="./images/close.png" class="close-icon" onclick="closeModel()" />
+    </div>
+
+    <script>
+      const modelBox = document.getElementById("modelBox");
+
+      document.onmouseleave = function () {
+        modelBox.style.display = "block";
+      };
+      function closeModel() {
+        modelBox.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
